@@ -29,7 +29,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 //startActivityForResult(intent, MainActivity.REQUEST_SIAPE);
             }
-        });;
+        });
+
+        btnServidor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnExterno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 }
