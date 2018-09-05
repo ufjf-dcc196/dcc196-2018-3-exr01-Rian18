@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Servidor"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/edt_NomeServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Insira nome aqui"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <EditText
+        android:id="@+id/edt_Siape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="Insira SIAPE aqui  "
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/txt_Label2"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Insira SIAPE e nome do Servidor"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Button
+        android:id="@+id/btn_EnviarServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="268dp" />
+</android.support.constraint.ConstraintLayout>
