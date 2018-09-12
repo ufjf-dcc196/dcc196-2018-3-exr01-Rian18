@@ -10,16 +10,30 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String SERV_NOME = "NOME";
+    public static final String SERV_NOME = "SERVIDOR";
     public static final String SERV_SIAPE = "SIAPE";
 
-    private static final int REQUEST_DADOS = 1;
+    public static final String ALUNO_NOME = "ALUNO";
+    public static final String ALUNO_MAT = "MATRICULA";
+
+    public static final String EXTERNO_NOME = "EXTERNO";
+    public static final String EXTERNO_EMAIL= "EMAIL";
+
+    private static final int REQUEST_SERVIDOR = 1;
+    private static final int REQUEST_ALUNO = 1;
+    private static final int REQUEST_EXTERNO = 1;
+
     private Button btnAluno;
     private Button btnServidor;
     private Button btnExterno;
+
     private TextView txtServidor;
+    private TextView txtAluno;
+    private TextView txtExterno;
 
     int somaServidor = 0;
+    int somaAluno = 0;
+    int somaExterno = 0;
 
 
     @Override
@@ -32,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
         btnExterno = (Button)findViewById(R.id.btn_Externo);
 
         txtServidor = (TextView) findViewById(R.id.txt_Servidor);
+        txtAluno = (TextView) findViewById(R.id.txt_Aluno);
+        txtExterno = (TextView) findViewById(R.id.txt_Externo);
 
         btnAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
-                //intent.putExtra(PESSOA_NOME, edtNome.getText().toString());
-                startActivity(intent);
-                //startActivityForResult(intent, MainActivity.REQUEST_SIAPE);
+                startActivityForResult(intent, MainActivity.REQUEST_ALUNO);
             }
         });
 
@@ -47,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
-                startActivityForResult(intent, MainActivity.REQUEST_DADOS);
+                startActivityForResult(intent, MainActivity.REQUEST_SERVIDOR);
 
             }
         });
@@ -56,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ExternoActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, MainActivity.REQUEST_EXTERNO);
 
             }
         });
@@ -66,12 +80,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == MainActivity.REQUEST_DADOS && resultCode == Activity.RESULT_OK && data != null) {
+        if(requestCode == MainActivity.REQUEST_SERVIDOR && resultCode == Activity.RESULT_OK && data != null) {
             Bundle bundleResultado = data.getExtras();
-            String nome = bundleResultado.getString(MainActivity.SERV_NOME);
+            String nomeServ = bundleResultado.getString(MainActivity.SERV_NOME);
             String siape = bundleResultado.getString(MainActivity.SERV_SIAPE);
             somaServidor = somaServidor + 1;
-            txtServidor.setText("Último servidor : " + nome + " - " + siape + " Quantidade : " + String.valueOf(somaServidor));
+            txtServidor.setText("Último servidor : " + nomeServ + " - " + siape + " Quantidade : " + String.valueOf(somaServidor));
+
+        }else if(requestCode == MainActivity.REQUEST_ALUNO && resultCode == Activity.RESULT_OK && data != null) {
+            Bundle bundleResultado1 = data.getExtras();
+            String nomeAluno = bundleResultado1.getString(MainActivity.ALUNO_NOME);
+            String matricula = bundleResultado1.getString(MainActivity.ALUNO_MAT);
+            somaAluno = somaAluno + 1;
+            txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
         }
     }
 }
