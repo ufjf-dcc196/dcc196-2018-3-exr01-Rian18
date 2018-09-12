@@ -15,10 +15,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="36dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="96dp"
         android:text="Aluno"
         app:layout_constraintEnd_toStartOf="@+id/btn_Externo"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Titulo" />
 
@@ -30,7 +30,7 @@
         android:layout_marginRight="40dp"
         android:text="Externo"
         app:layout_constraintEnd_toStartOf="@+id/btn_Servidor"
-        tools:layout_editor_absoluteY="177dp" />
+        tools:layout_editor_absoluteY="174dp" />
 
     <Button
         android:id="@+id/btn_Servidor"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="96dp"
         android:text="Servidor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Titulo" />
@@ -47,12 +47,13 @@
         android:id="@+id/txt_Titulo"
         android:layout_width="393dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="Escolha uma das opções e preencha os dados : "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/btn_Externo"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
@@ -65,7 +66,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="Servidor"
         app:layout_constraintBottom_toTopOf="@+id/txt_Aluno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +82,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:text="Aluno"
         app:layout_constraintBottom_toTopOf="@+id/txt_Externo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -95,9 +96,27 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:text="Externo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Total de Participantes : 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 
 </android.support.constraint.ConstraintLayout>
