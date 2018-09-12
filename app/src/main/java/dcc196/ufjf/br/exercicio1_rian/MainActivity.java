@@ -109,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
                     Bundle bundleResultado1 = data.getExtras();
                     String nomeExterno = bundleResultado1.getString(MainActivity.EXTERNO_NOME);
                     String email = bundleResultado1.getString(MainActivity.EXTERNO_EMAIL);
-                    somaAluno = somaAluno + 1;
-                    txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
+                    somaExterno = somaExterno + 1;
+                    txtAluno.setText("Último aluno : " + nomeExterno + " - " + email + " Quantidade : " + String.valueOf(somaAluno));
 
                 }
                 break;
