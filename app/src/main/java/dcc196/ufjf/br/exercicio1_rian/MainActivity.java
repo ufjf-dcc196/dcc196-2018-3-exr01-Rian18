@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTERNO_NOME = "EXTERNO";
     public static final String EXTERNO_EMAIL= "EMAIL";
 
-    private static final int REQUEST_SERVIDOR = 1;
+    private static final int REQUEST_SERVIDOR = 0;
     private static final int REQUEST_ALUNO = 1;
-    private static final int REQUEST_EXTERNO = 1;
+    private static final int REQUEST_EXTERNO = 2;
 
     private Button btnAluno;
     private Button btnServidor;
@@ -76,23 +76,46 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == MainActivity.REQUEST_SERVIDOR && resultCode == Activity.RESULT_OK && data != null) {
-            Bundle bundleResultado = data.getExtras();
-            String nomeServ = bundleResultado.getString(MainActivity.SERV_NOME);
-            String siape = bundleResultado.getString(MainActivity.SERV_SIAPE);
-            somaServidor = somaServidor + 1;
-            txtServidor.setText("Último servidor : " + nomeServ + " - " + siape + " Quantidade : " + String.valueOf(somaServidor));
+        switch (requestCode)
+        {
+            case 0:
+                if(resultCode == Activity.RESULT_OK && data != null) {
+                    Bundle bundleResultado = data.getExtras();
+                    String nomeServ = bundleResultado.getString(MainActivity.SERV_NOME);
+                    String siape = bundleResultado.getString(MainActivity.SERV_SIAPE);
+                    somaServidor = somaServidor + 1;
+                    txtServidor.setText("Último servidor : " + nomeServ + " - " + siape + " Quantidade : " + String.valueOf(somaServidor));
 
-        }else if(requestCode == MainActivity.REQUEST_ALUNO && resultCode == Activity.RESULT_OK && data != null) {
-            Bundle bundleResultado1 = data.getExtras();
-            String nomeAluno = bundleResultado1.getString(MainActivity.ALUNO_NOME);
-            String matricula = bundleResultado1.getString(MainActivity.ALUNO_MAT);
-            somaAluno = somaAluno + 1;
-            txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
+                }
+                break;
+            case 1:
+                if(resultCode == Activity.RESULT_OK && data != null) {
+                    Bundle bundleResultado1 = data.getExtras();
+                    String nomeAluno = bundleResultado1.getString(MainActivity.ALUNO_NOME);
+                    String matricula = bundleResultado1.getString(MainActivity.ALUNO_MAT);
+                    somaAluno = somaAluno + 1;
+                    txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
+
+                }
+                break;
+
+            case 2:
+                if(resultCode == Activity.RESULT_OK && data != null) {
+                    Bundle bundleResultado1 = data.getExtras();
+                    String nomeExterno = bundleResultado1.getString(MainActivity.EXTERNO_NOME);
+                    String email = bundleResultado1.getString(MainActivity.EXTERNO_EMAIL);
+                    somaAluno = somaAluno + 1;
+                    txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
+
+                }
+                break;
         }
+
+
     }
 }
