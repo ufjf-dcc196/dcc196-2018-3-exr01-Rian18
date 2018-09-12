@@ -30,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtServidor;
     private TextView txtAluno;
     private TextView txtExterno;
+    private TextView txtTotal;
 
     int somaServidor = 0;
     int somaAluno = 0;
     int somaExterno = 0;
+    int somaTotal = 0;
 
 
     @Override
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         txtServidor = (TextView) findViewById(R.id.txt_Servidor);
         txtAluno = (TextView) findViewById(R.id.txt_Aluno);
         txtExterno = (TextView) findViewById(R.id.txt_Externo);
+        txtTotal = (TextView) findViewById(R.id.txt_Total);
 
         btnAluno.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     String nomeServ = bundleResultado.getString(MainActivity.SERV_NOME);
                     String siape = bundleResultado.getString(MainActivity.SERV_SIAPE);
                     somaServidor = somaServidor + 1;
+                    somaTotal = somaTotal + 1;
                     txtServidor.setText("Último servidor : " + nomeServ + " - " + siape + " Quantidade : " + String.valueOf(somaServidor));
 
                 }
@@ -99,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     String nomeAluno = bundleResultado1.getString(MainActivity.ALUNO_NOME);
                     String matricula = bundleResultado1.getString(MainActivity.ALUNO_MAT);
                     somaAluno = somaAluno + 1;
+                    somaTotal = somaTotal + 1;
                     txtAluno.setText("Último aluno : " + nomeAluno + " - " + matricula + " Quantidade : " + String.valueOf(somaAluno));
 
                 }
@@ -106,16 +111,17 @@ public class MainActivity extends AppCompatActivity {
 
             case 2:
                 if(resultCode == Activity.RESULT_OK && data != null) {
-                    Bundle bundleResultado1 = data.getExtras();
-                    String nomeExterno = bundleResultado1.getString(MainActivity.EXTERNO_NOME);
-                    String email = bundleResultado1.getString(MainActivity.EXTERNO_EMAIL);
+                    Bundle bundleResultado2 = data.getExtras();
+                    String nomeExterno = bundleResultado2.getString(MainActivity.EXTERNO_NOME);
+                    String email = bundleResultado2.getString(MainActivity.EXTERNO_EMAIL);
                     somaExterno = somaExterno + 1;
-                    txtAluno.setText("Último aluno : " + nomeExterno + " - " + email + " Quantidade : " + String.valueOf(somaAluno));
+                    somaTotal = somaTotal + 1;
+                    txtExterno.setText("Último externo : " + nomeExterno + " - " + email + " Quantidade : " + String.valueOf(somaAluno));
 
                 }
                 break;
         }
 
-
+        txtTotal.setText("Total de Participantes: "+ String.valueOf(somaTotal));
     }
 }
