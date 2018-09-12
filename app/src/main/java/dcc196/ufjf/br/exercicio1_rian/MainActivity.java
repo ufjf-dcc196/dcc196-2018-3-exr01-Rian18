@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     String email = bundleResultado2.getString(MainActivity.EXTERNO_EMAIL);
                     somaExterno = somaExterno + 1;
                     somaTotal = somaTotal + 1;
-                    txtExterno.setText("Último externo : " + nomeExterno + " - " + email + " Quantidade : " + String.valueOf(somaAluno));
+                    txtExterno.setText("Último externo : " + nomeExterno + " - " + email + " Quantidade : " + String.valueOf(somaExterno));
 
                 }
                 break;
