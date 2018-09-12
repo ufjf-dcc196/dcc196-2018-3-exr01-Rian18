@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/edt_Nome"
+        android:id="@+id/edt_NomeAluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
@@ -27,8 +27,8 @@
         android:ems="10"
         android:hint="Insira matrícula aqui"
         android:inputType="text|textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edt_Nome"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Nome" />
+        app:layout_constraintStart_toStartOf="@+id/edt_NomeAluno"
+        app:layout_constraintTop_toBottomOf="@+id/edt_NomeAluno" />
 
     <TextView
         android:id="@+id/txt_Label"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_Enviar"
+        android:id="@+id/btn_EnviarAluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
