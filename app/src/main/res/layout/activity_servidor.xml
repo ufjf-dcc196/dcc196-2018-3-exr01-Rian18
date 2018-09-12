@@ -11,36 +11,48 @@
         android:id="@+id/edt_NomeServidor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:ems="10"
+        android:hint="Insira nome aqui"
         android:inputType="textPersonName"
-        android:text="Insira nome aqui"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="186dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_EnviarServidor"
+        app:layout_constraintStart_toStartOf="@+id/edt_Siape"
+        app:layout_constraintTop_toBottomOf="@+id/edt_Siape" />
 
     <EditText
         android:id="@+id/edt_Siape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Insira SIAPE aqui"
         android:inputType="text|textPersonName"
-        android:text="Insira SIAPE aqui  "
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="120dp" />
+        app:layout_constraintBottom_toTopOf="@+id/edt_NomeServidor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Label2" />
 
     <TextView
         android:id="@+id/txt_Label2"
         android:layout_width="204dp"
-        android:layout_height="37dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="43dp"
         android:text="Insira SIAPE e nome do Servidor"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintBottom_toTopOf="@+id/edt_Siape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_EnviarServidor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="195dp"
         android:text="Enviar"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="268dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_NomeServidor" />
 </android.support.constraint.ConstraintLayout>

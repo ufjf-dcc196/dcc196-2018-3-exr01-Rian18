@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnServidor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
+                Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
                 startActivity(intent);
 
             }
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnExterno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
+                Intent intent = new Intent(MainActivity.this, ExternoActivity.class);
                 startActivity(intent);
 
             }

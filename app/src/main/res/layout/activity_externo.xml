@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ExternoActivity">
 
+    <EditText
+        android:id="@+id/edt_Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Insira o e-mail aqui"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <EditText
+        android:id="@+id/edt_NomeExterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Insira nome aqui"
+        android:inputType="text|textPersonName"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/txt_Label3"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Insira nome e e-mail do Externo"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Button
+        android:id="@+id/btn_EnviarExterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="268dp" />
 </android.support.constraint.ConstraintLayout>

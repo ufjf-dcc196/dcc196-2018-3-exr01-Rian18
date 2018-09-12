@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
         android:ems="10"
+        android:hint="Insira nome aqui"
         android:inputType="textPersonName"
-        android:text="Insira nome aqui"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Label" />
@@ -26,7 +26,6 @@
         android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:text="Insira matrícula aqui  "
         app:layout_constraintStart_toStartOf="@+id/edt_Nome"
         app:layout_constraintTop_toBottomOf="@+id/edt_Nome" />
 
