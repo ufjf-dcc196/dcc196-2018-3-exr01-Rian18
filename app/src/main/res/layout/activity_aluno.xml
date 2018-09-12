@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:ems="10"
+        android:hint="Insira matrícula aqui"
         android:inputType="text|textPersonName"
         app:layout_constraintStart_toStartOf="@+id/edt_Nome"
         app:layout_constraintTop_toBottomOf="@+id/edt_Nome" />
@@ -34,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
-        android:text="Insira nome e Matrícula do Aluno "
+        android:text="Insira Nome e Matrícula do Aluno "
         android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +45,12 @@
         android:id="@+id/btn_Enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="61dp"
         android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Matricula" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_Matricula"
+        app:layout_constraintVertical_bias="0.067" />
 </android.support.constraint.ConstraintLayout>
